@@ -1,0 +1,33 @@
+#navbar {
+    display: inline-block;
+}
+
+#marca {
+    display: inline-block;
+}
+
+.nav-item {
+    margin-top: 1%;
+}
+
+#digimon {
+    margin-top: 1%;
+}
+
+#botonbusqueda {
+    display: inline-block;
+    margin-bottom: 3%;
+    margin-left: 1%;
+} 
+
+
+#citas {
+    font-size: xx-large;
+    font-style: italic;
+}
+
+#selecciondigimon {
+    margin-top: 1%;
+    margin-left: 0%;
+
+}

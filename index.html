@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
     <link rel="icon" href="assets/img/ícono página.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"crossorigin="anonymous">
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
@@ -17,8 +18,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>    
     <script defer src="assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>    
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <title>Digital Monsters</title>
 
 </head>
@@ -47,40 +49,51 @@
 <!-- Aqui van las citas en la página -->  
 
 
-<div class="container-fluid id="citas">
+<div class="container">
+<div class="abs-center">    
         <div class="card group border-0">
-            <div class="mt-5 mt-sm-5 mt-lg-5 mt-md-5 mt-xl-5 mt-xxl-5 mx-5 border-0">
-            <img src="assets/img/joe kido.png" class="h-50 p-2 mx-5" class="card-img-top" alt="Joe Kido">
-        <div class="card-text mx-5" style="width:10rem">
-        <blockquote class="blockquote">
+            <div class="mt-5 mt-sm-5 mt-lg-5 mt-md-5 mt-xl-5 mt-xxl-5 mx-10 border-0">
+            <img src="assets/img/joe kido.png" class="h-50 p-2" id="joekido" class="card-img-top" alt="Joe Kido">
+        <div class="card-body mx-5 card-text dark-bg-info" style="width:10rem justify-self fit-content">
+        <p id="presionamifoto"> Presiona mi <b>foto</b> para saber más de mí.</p>  
+        </div>   
+            <blockquote class="blockquote">
             <p>Cada quien debe encontrar su propio camino.</p>
-            <footer class="blockquote-footer text-center"><cite title="Título de la fuente">Joe Kido</cite>
+            <footer class="blockquote-footer"><cite title="Título de la fuente">Joe Kido</cite>
             </footer>
-        </blockquote>  
-</div>  
+            </blockquote>
+        </div>  
 
 
-<div class= "mt-5 mt-sm-5 mt-lg-5 mt-md-5 mt-xl-5 mt-xxl-5 mx-10 border-0">
-      <img src="assets/img/Myotismon.png" class="h-50 p-2" class="card-img-top" alt="Myotismon">
-    <div class="card-text mx-5" style="width:10rem">
-        <blockquote class="blockquote text-center">
-          <p>Sueños fugaces solo muestran a un verdadero tonto.</p>
-          <footer class="blockquote-footer text-center"><cite title="Título de la fuente">Myotismon</cite>
-          </footer>
-        </blockquote>  
+
+    <div class= "mt-5 mt-sm-5 mt-lg-5 mt-md-5 mt-xl-5 mt-xxl-5 mx-10 border-0">
+      <img src="assets/img/Myotismon.png" class="h-50 p-2" id="myotismon" class="card-img-top" alt="Myotismon">
+    <div class="card-body mx-5 card-text dark-bg-info" style="width:10rem justify-self fit-content">
+        <p id="presionamifoto"> Presiona mi <b>foto</b> para saber más de mí.</p> 
     </div>  
-</div>
+          <blockquote class="blockquote">
+          <p>Sueños fugaces solo muestran a un verdadero tonto.</p>
+          <footer class="blockquote-footer"><cite title="Título de la fuente">Myotismon</cite>
+          </footer>
+        </blockquote>
+    </div>  
 
 
-<div class="mt-5 mt-sm-5 mt-lg-5 mt-md-5 mt-xl-5 mt-xxl-5 mx-5 border-0">
-        <img src="assets/img/Sora.png" class="h-50 p-2" class="card-img-top" alt="Sora Takenouchi"> 
-    <div class="card-text mx-4" style="width:10rem"> 
-        <blockquote class="blockquote text-center">
-            <p>¡Si no cambiamos nada por nosotros mismos, nada más lo hará!</p>
-            <footer class="blockquote-footer text-center"><cite title="Título de la fuente">Sora Takenouchi</cite></footer>
+
+    <div class="mt-5 mt-sm-5 mt-lg-5 mt-md-5 mt-xl-5 mt-xxl-5 mx-10 border-0">
+        <img src="assets/img/Sora Takenouchi.png" class="h-50 p-2 mx-5" id="sora" class="card-img-top" alt="Sora Takenouchi"> 
+      <div class="card-body mx-5 card-text dark-bg-info" style="width:10rem justify-self fit-content">
+        <p id="presionamifoto"> Presiona mi <b>foto</b> para saber más de mí.</p> 
+      </div>  
+        <blockquote class="blockquote">
+        <p>¡Si no cambiamos nada por nosotros mismos, nada más lo hará!</p>
+        <footer class="blockquote-footer"><cite title="Título de la fuente">Sora Takenouchi</cite></footer>
         </blockquote>   
     </div>          
 </div>
+</div>
+
+
 
 <!-- Aquí va el modal -->
 
@@ -105,7 +118,6 @@
 </div>
 </div>
 
+
 </body>
-
-
 </html>

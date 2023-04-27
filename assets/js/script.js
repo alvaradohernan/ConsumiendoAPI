@@ -63,6 +63,8 @@ selectDigimones.addEventListener("change", function () {
     getDigimon(selectDigimones.value);
 });
 
+
+
 function mostrarModal(digimon) {
     const myModal = new bootstrap.Modal("#exampleModal");
     document.getElementById("nombreDigimon").innerText = digimon.name;
@@ -77,4 +79,27 @@ function mostrarModal(digimon) {
     myModal.show();
 }
 
+$.ajax({
+    type: "get",
+    url: "https://digimon-api.vercel.app/api/digimon",
+    dataType: "json",
+    success: function (response) {
+        tabla(response);
+    }
+});
+
+function tabla(datos) {
+    var cuerpoTabla = document.querySelector('#cuerpoTabla');
+    for (var i = 0; i < datos.length; i = i + 1) {
+        var fila = document.createElement('tr');
+        var columnaDos = document.createElement('td');
+        var columnaTres = document.createElement('td');
+        var columnaCuatro = document.createElement('td');
+        columnaDos.innerHTML = datos[i].name;
+        columnaTres.innerHTML = datos[i].img;
+        columnaCuatro.innerHTML = datos[i].level;
+        fila.append(columnaDos, columnaTres, columnaCuatro);
+        cuerpoTabla.append(fila);
+    }
+}
 
